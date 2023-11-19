@@ -25,6 +25,9 @@
 			<textarea name="deskripsi"></textarea>
 		</p>
 		<p>
+			<input type="file" name="uploadfile" value="">
+		</p>
+		<p>
 			<input type="submit" value="submit" name="submit" />
 		</p>
 		</fieldset>
