@@ -1,0 +1,35 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "username": "postgres",
+            "database": "company",
+            "name": "company"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "projectbasdat",
+            "database": "projectbasdat",
+            "username": "postgres"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "sekolah",
+            "database": "sekolah",
+            "username": "postgres"
+        }
+    ],
+    "php.stubs": [
+        "*",
+        "pgsql"
+    ]
+}

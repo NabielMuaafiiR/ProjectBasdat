@@ -17,6 +17,7 @@ session_start();
 	</form>
 	<br>
     <?php
+	//SPECIAL UNTUK ADMIN
     if(isset($_SESSION['admin'])){
         echo"<br>";
         echo "<a href='tambah.php'>Edit</a>";
@@ -32,7 +33,8 @@ session_start();
 	<tbody>
 
 		<?php
-		if(isset($_POST["searchbutton"])){
+		//SEARCH FUNCTION
+		if(isset($_POST["searchbutton"])){ 
 			$search = $_POST['search'];
 			$u_search = strtolower($search);
 			$u_search = ucwords($u_search);
@@ -45,11 +47,15 @@ session_start();
 								 OR nama_produk LIKE '%$l_search%';") 
 								 
 					or die("pencarian tidak ada");
+
+			//KETIKA TIDAK SEARCH APA APA
 			if(empty($search)){
 				$query = pg_query($db, "SELECT * FROM barang");
+				
 				while($row = pg_fetch_array($query)){
 					echo "<tr>";
-	
+					
+					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image"></td>';
 					echo "<td>".$row['kode_produk']."</td>";
 					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td>';
 					echo "<td>".$row['stok_barang']."</td>";
@@ -58,13 +64,17 @@ session_start();
 					echo "</tr>";
 				}
 			}
+			//KETIKA TIDAK ADA DI DATABASE
 			else if(pg_num_rows($query)==0){
 				echo "Pencarian Tidak Ada";
+
+			//MUNCULKAN SEARCH
 			}else{
 				while($row = pg_fetch_assoc($query)){
 					
 					echo "<tr>";
 
+					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image"></td>';
 					echo "<td>".$row['kode_produk']."</td>";
 					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td>';
 					echo "<td>".$row['stok_barang']."</td>";
@@ -74,11 +84,14 @@ session_start();
 				}
 			}
 		}
+
+		//KETIKA BARU BUKA STORE
 		else{
 			$query = pg_query($db, "SELECT * FROM barang");
 			while($row = pg_fetch_array($query)){
 				echo "<tr>";
 
+				echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image"></td>';
 				echo "<td>".$row['kode_produk']."</td>";
 				echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td>';
 				echo "<td>".$row['stok_barang']."</td>";
