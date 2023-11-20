@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="prosespenambahan.php" method="post">
+<form action="prosespenambahan.php" method="post" enctype="multipart/form-data">
 		<fieldset>
 		<p>
 			<label for="kode">Kode Barang: </label>
@@ -25,7 +25,7 @@
 			<textarea name="deskripsi"></textarea>
 		</p>
 		<p>
-			<input type="file" name="uploadfile" value="">
+			<input type="file" name="gambar" value="">
 		</p>
 		<p>
 			<input type="submit" value="submit" name="submit" />
