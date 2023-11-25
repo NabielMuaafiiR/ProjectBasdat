@@ -2,23 +2,21 @@
 include("connectdb.php");
 
 if(isset($_POST['submit'])){
-    $kode=$_POST['kode'];
+    $kode=mt_rand(9999, 99999999);;
     $nama=$_POST['nama'];
     $stok=$_POST['stok'];
     $deskripsi=$_POST['deskripsi'];
-    
+    $harga=$_POST['harga'];
     // File upload handling
-    $filename = $_FILES['uploadfile']['name'];
-    $size = $_FILES['uploadfile']['size'];
-    $error = $_FILES['uploadfile']['error'];
-    $tempname = $_FILES['uploadfile']['tmp_name'];
-    $folder = 'image' . $filename;
+    $tempname = $_FILES['gambar']['tmp_name'];
+    $filename = $_FILES['gambar']['name'];
+   
 
-    // Insert data into the database
-    $query = pg_query("INSERT INTO barang (kode_produk, nama_produk, stok_barang, deskripsi, gambar) VALUES ('$kode', '$nama', '$stok', '$deskripsi', '$filename')") or die(pg_error());
-    
     // Move the uploaded file to the specified directory
-    $movefile = move_uploaded_file($tempname, $folder);
+    move_uploaded_file($tempname, 'image/' . $filename);
+    // Insert data into the database
+    $query = pg_query("INSERT INTO barang (kode_produk, nama_produk, stok_barang, deskripsi, gambar, harga) VALUES ('$kode', '$nama', '$stok', '$deskripsi', '$filename', '$harga')") or die(pg_error());
+    
 
     if($query == 1 && $movefile == 1){
         header("location: store.php?status=sukses");
@@ -27,3 +25,4 @@ if(isset($_POST['submit'])){
     }
 }
 ?>
+

@@ -1,6 +1,7 @@
 <?php 
-include("connectdb.php"); 
 session_start();
+include("connectdb.php"); 
+include("navbar.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,15 +13,15 @@ session_start();
 </head>
 <body>
 	<form action="store.php" method="post">
-        <input type="text" name="search" placeholder="search">
+		<input type="text" name="search" placeholder="search">
         <input type="submit" value="search" name="searchbutton"/>
 	</form>
-	<br>
     <?php
 	//SPECIAL UNTUK ADMIN
     if(isset($_SESSION['admin'])){
         echo"<br>";
-        echo "<a href='tambah.php'>Edit</a>";
+        echo "<a href='tambah.php'>Edit</a><br>";
+		echo "<a href='checkorder.php'>Order</a>";
 		echo "<br>";
     }
     ?>
@@ -55,12 +56,14 @@ session_start();
 				while($row = pg_fetch_array($query)){
 					echo "<tr>";
 					
-					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image"></td>';
-					echo "<td>".$row['kode_produk']."</td>";
-					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td>';
-					echo "<td>".$row['stok_barang']."</td>";
-					echo "<td>".$row['deskripsi']."</td>";
-					
+					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image" style="width:70px;height:70px;"</td>';
+					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td><br>';
+					echo "<td>".$row['harga']."</td><br>";
+					if(isset($_SESSION['admin'])){
+						echo"<br>";
+						echo '<td> <a href="editbarang.php?data='.$row['kode_produk'].'">Edit</a></td><br>';
+						echo "<br>";
+					}
 					echo "</tr>";
 				}
 			}
@@ -74,12 +77,14 @@ session_start();
 					
 					echo "<tr>";
 
-					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image"></td>';
-					echo "<td>".$row['kode_produk']."</td>";
-					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td>';
-					echo "<td>".$row['stok_barang']."</td>";
-					echo "<td>".$row['deskripsi']."</td>";
-					
+					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image" style="width:70px;height:70px;"</td>';
+					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td><br>';
+					echo "<td>".$row['harga']."</td><br>";
+					if(isset($_SESSION['admin'])){
+						echo"<br>";
+						echo '<td> <a href="editbarang.php?data='.$row['kode_produk'].'">Edit</a></td><br>';
+						echo "<br>";
+					}
 					echo "</tr>";
 				}
 			}
@@ -91,12 +96,15 @@ session_start();
 			while($row = pg_fetch_array($query)){
 				echo "<tr>";
 
-				echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image"></td>';
-				echo "<td>".$row['kode_produk']."</td>";
-				echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td>';
-				echo "<td>".$row['stok_barang']."</td>";
-				echo "<td>".$row['deskripsi']."</td>";
-				
+				echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image" style="width:70px;height:70px;"</td>';
+				echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td><br>';
+				echo "<td>".$row['harga']."</td><br>";
+				if(isset($_SESSION['admin'])){
+					echo"<br>";
+					echo '<td> <a href="editbarang.php?data='.$row['kode_produk'].'">Edit</a></td><br>';
+					echo "<br>";
+				}
+
 				echo "</tr>";
 		}
 		}
@@ -108,6 +116,6 @@ session_start();
 
 	</tbody>
 	</table>
-
+		
 </body>
 </html>
