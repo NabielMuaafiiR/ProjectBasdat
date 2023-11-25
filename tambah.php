@@ -18,11 +18,15 @@
 		</p>
 		<p>
 			<label for="stok">Stok Barang: </label>
-			<textarea name="stok"></textarea>
+			<input type="text" name="stok" placeholder="stok barang" />
 		</p>
         <p>
 			<label for="deskripsi">Deskripsi Barang: </label>
 			<textarea name="deskripsi"></textarea>
+		</p>
+		<p>
+			<label for="harga">Harga Barang: </label>
+			<input type="text" name="harga" placeholder="harga barang" />
 		</p>
 		<p>
 			<input type="file" name="gambar" value="">
