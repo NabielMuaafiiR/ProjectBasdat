@@ -59,7 +59,11 @@ include("navbar.php");
 					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image" style="width:70px;height:70px;"</td>';
 					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td><br>';
 					echo "<td>".$row['harga']."</td><br>";
-
+					if(isset($_SESSION['admin'])){
+						echo"<br>";
+						echo '<td> <a href="editbarang.php?data='.$row['kode_produk'].'">Edit</a></td><br>';
+						echo "<br>";
+					}
 					echo "</tr>";
 				}
 			}
@@ -76,7 +80,11 @@ include("navbar.php");
 					echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image" style="width:70px;height:70px;"</td>';
 					echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td><br>';
 					echo "<td>".$row['harga']."</td><br>";
-
+					if(isset($_SESSION['admin'])){
+						echo"<br>";
+						echo '<td> <a href="editbarang.php?data='.$row['kode_produk'].'">Edit</a></td><br>';
+						echo "<br>";
+					}
 					echo "</tr>";
 				}
 			}
@@ -91,6 +99,11 @@ include("navbar.php");
 				echo '<td><img src="./image/' . $row['gambar'] . '" alt="Product Image" style="width:70px;height:70px;"</td>';
 				echo '<td> <a href="displayproduk.php?data='.$row['kode_produk'].'">'.$row['nama_produk'].' </a></td><br>';
 				echo "<td>".$row['harga']."</td><br>";
+				if(isset($_SESSION['admin'])){
+					echo"<br>";
+					echo '<td> <a href="editbarang.php?data='.$row['kode_produk'].'">Edit</a></td><br>';
+					echo "<br>";
+				}
 
 				echo "</tr>";
 		}

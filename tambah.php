@@ -9,10 +9,6 @@
 <form action="prosespenambahan.php" method="post" enctype="multipart/form-data">
 		<fieldset>
 		<p>
-			<label for="kode">Kode Barang: </label>
-			<input type="text" name="kode" placeholder="kode barang 6 digit" />
-		</p>
-		<p>
 			<label for="nama">Nama Barang: </label>
 			<textarea name="nama"></textarea>
 		</p>

@@ -2,7 +2,7 @@
 include("connectdb.php");
 
 if(isset($_POST['submit'])){
-    $kode=$_POST['kode'];
+    $kode=mt_rand(9999, 99999999);;
     $nama=$_POST['nama'];
     $stok=$_POST['stok'];
     $deskripsi=$_POST['deskripsi'];
