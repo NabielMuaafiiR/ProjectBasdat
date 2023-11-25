@@ -88,7 +88,7 @@ session_start();?>
 
     <p>TOTAL:Rp.<?php echo "$total"; ?></p>
     
-    <form method='POST' action="fungsicheckout.php">
+    <form method='POST' action="fungsicheckout.php" enctype="multipart/form-data">
     <p>
         <label for="Alamat">Alamat Lengkap </label><br>
         <textarea name="alamat"></textarea>
@@ -108,8 +108,7 @@ session_start();?>
     </div>
     
     <input type="submit" value="buat pesanan" name="buat_pesanan" />
-    
-</form>
+    </form>
     
     <p>
     <?php if(isset($_GET['status'])): ?>

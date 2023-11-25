@@ -16,7 +16,8 @@ include("navbar.php");
     </header>
 
     <br>
-
+    <a href="history.php">history</a>
+    <br>
     <table border="1">
         <thead>
             <tr>

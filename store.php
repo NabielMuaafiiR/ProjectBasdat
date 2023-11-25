@@ -20,7 +20,8 @@ include("navbar.php");
 	//SPECIAL UNTUK ADMIN
     if(isset($_SESSION['admin'])){
         echo"<br>";
-        echo "<a href='tambah.php'>Edit</a>";
+        echo "<a href='tambah.php'>Edit</a><br>";
+		echo "<a href='checkorder.php'>Order</a>";
 		echo "<br>";
     }
     ?>
