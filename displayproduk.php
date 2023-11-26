@@ -14,7 +14,6 @@ session_start();
 	<form method="POST" action="tambahkeranjang.php" enctype="multipart/form-data">
 		<?php
 		$id = $_GET['data'];
-		$username = $_SESSION['username'];
 
 		$query = pg_query($db, "SELECT * FROM barang where kode_produk = '$id'");
 		$row = pg_fetch_array($query);
