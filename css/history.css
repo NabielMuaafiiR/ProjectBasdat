@@ -1,0 +1,41 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #7852FF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #7852FF;
+    color: white;
+}
+
+td a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}

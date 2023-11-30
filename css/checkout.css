@@ -1,0 +1,76 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0px;
+    padding: 0px;
+    font-size: larger;
+}
+
+header {
+    background-color: #7852FF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #7852FF;
+    color: white;
+}
+
+p {
+    margin-top: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 8px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+#uploadField {
+    margin-top: 10px;
+}
+
+input[type="file"] {
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-color: #7852FF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: white;
+    color: #7852FF;
+    transition: 0.5s;
+}

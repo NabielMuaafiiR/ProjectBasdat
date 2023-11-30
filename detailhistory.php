@@ -12,6 +12,7 @@ session_start();?>
             image.style.display = (image.style.display === 'none' || image.style.display === '') ? 'block' : 'none';
         }
     </script>
+    <link rel="stylesheet" href="css/keranjang.css">
 </head>
 
 <body>

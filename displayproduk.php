@@ -7,8 +7,12 @@ session_start();
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deskripsi</title>
+    <link rel="stylesheet" href="css/deskripsi.css">
+    <link href="https://fonts.googleapis.com/css?family=Arial&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
 	<form method="POST" action="tambahkeranjang.php" enctype="multipart/form-data">
@@ -18,14 +22,28 @@ session_start();
 		$query = pg_query($db, "SELECT * FROM barang where kode_produk = '$id'");
 		$row = pg_fetch_array($query);
 		?>
-		<p>
-		<img src="./image/<?php echo $row['gambar']; ?>" alt="Product Image"> <br>
-			Nama Produk : <?php echo $row['nama_produk']; ?> <br>
-			Stok 		: <?php echo $row['stok_barang']; ?> <br>
-			Harga 		: <?php echo $row['harga']; ?> <br>
-			Deskkripsi	: <br> <?php echo $row['deskripsi']; ?>
-		</p>
-		<input type="submit" value="add to cart" name="keranjang"/>
+		<main>
+        <section class="gambarbarang">
+    		<div><img src="./image/<?php echo $row['gambar']; ?>" alt="Product Image" style="width: 100%; max-width: 700px;"></div>
+		</section>
+        <hr>
+        <section class="namabarang">
+            <p>Nama Produk : <?php echo $row['nama_produk']; ?> <br></p>
+            <p>Harga       : Rp.<?php echo $row['harga']; ?> <br></p>
+            <p>Stok        : <?php echo $row['stok_barang']; ?> <br></p>
+        </section>
+        <hr>
+        <section class="namabarang">
+            <p>Deskripsi Barang</p>
+            <p id="deskripsi">
+                <?php echo $row['deskripsi']; ?>
+            </p>
+        </section>
+    </main>
+    <footer>
+    	<input type="submit" value="add to cart" name="keranjang" style="display: flex; justify-content: center; align-items: center; color: #FFF; text-align: center; font-family: Arial; font-size: 2.38513rem; font-style: normal; font-weight: 400; line-height: normal; width: 15.05156rem; height: 3.44231rem; border-radius: 4.21344rem; background: #7852FF; transform: translateX(-5rem);" />
+	</footer>
+
 
 
 		<!-- untuk array -->
