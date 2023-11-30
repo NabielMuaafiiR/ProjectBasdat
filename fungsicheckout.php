@@ -29,6 +29,11 @@
                 $id = mt_rand(9999, 99999999);
             }
         }
+        $query = pg_query($db,"INSERT INTO checkout (
+            order_id, alamat, pembayaran, bukti_transfer, tanggal_pembelian, username
+        ) 
+        VALUES('$id','$alamat', '$pembayaran','$buktitf','$tanggal_pembelian', '$user'
+        );");
         if (empty($alamat) && empty($pembayaran)) {
             header("location: checkout.php?status=isikedua");
         } elseif (empty($alamat)) {
@@ -43,7 +48,7 @@
                 $nama = $row['nama_produk'];
                 $harga = $row['harga'];
                 $jumlah = $row['jumlah'];
-                $query = pg_query($db,"INSERT INTO checkout (
+                $history = pg_query($db,"INSERT INTO history (
                                         order_id, alamat, pembayaran, bukti_transfer, nama_produk,
                                         harga, jumlah, username, kode_produk, tanggal_pembelian 
                                     ) 
@@ -52,7 +57,7 @@
                                     );");
                 $stok = pg_query($db, "UPDATE barang SET stok_barang = stok_barang - '$jumlah' WHERE kode_produk = $kode");
             }
-            if(pg_affected_rows($query) > 0){
+            if(pg_affected_rows($history) > 0){
                 $delete = pg_query($db, "DELETE FROM keranjang WHERE username='$user';");
                 header("location: store.php");
             }

@@ -7,14 +7,10 @@ include("navbar.php");
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Keranjang</title>
+    <link rel="stylesheet" href="css/keranjang.css">
 </head>
 
 <body>
-    <header>
-        <h3>Keranjang Anda</h3>
-    </header>
-
     <br>
     <a href="history.php">history</a>
     <br>
@@ -48,7 +44,7 @@ include("navbar.php");
 
                 echo "<form method='POST' action='updatejumlah.php'>";
                 echo "<td>".$produk['kode_produk']."</td>";
-                echo '<td><img src="./image/' . $produk['gambar'] . '" alt="Product Image" style="width:70px;height:70px;"</td>';
+                echo '<td><img src="./image/' . $produk['gambar'] . '" alt="Product Image"" class = "gambar"></td>';
                 echo "<td data-jumlah='".$produk['nama_produk']."'>".$produk['nama_produk']."</td>";
                 echo "<td data-harga='".$produk['harga']."'>".$produk['harga']."</td>";
                 echo "<td data-jumlah='".$produk['jumlah']."'>".$produk['jumlah']."</td>";

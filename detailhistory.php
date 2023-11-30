@@ -12,6 +12,7 @@ session_start();?>
             image.style.display = (image.style.display === 'none' || image.style.display === '') ? 'block' : 'none';
         }
     </script>
+    <link rel="stylesheet" href="css/keranjang.css">
 </head>
 
 <body>
@@ -39,7 +40,7 @@ session_start();?>
         <tbody>
         <?php
             $id = $_GET['data'];
-            $query = pg_query($db, "SELECT * FROM checkout WHERE order_id = '$id'");
+            $query = pg_query($db, "SELECT * FROM history WHERE order_id = '$id'");
             $total = 0;
             while ($produk = pg_fetch_array($query)) {
                 $subtotal = $produk['harga'] * $produk['jumlah'];

@@ -1,0 +1,149 @@
+
+.maintop {
+    width: 100vw;
+    height: 41.3125rem;
+    background-image: url("../images/v23_111.png");
+    background-size: cover;
+    position: relative;
+}
+.maintop a {
+    padding: 0.75rem 1.75rem;
+    flex-shrink: 0;
+    border-radius: 1.96875rem;
+    background: #7852FF;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Archivo Black';
+    font-size: 2.3825rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 5.31rem;
+    left: 6.31rem;
+}
+
+.maintop p {
+    width: 35.82306rem;
+    color: var(--background-white, #FFF);
+    font-family: Poppins;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 6rem */
+    letter-spacing: 0.03125rem;
+    position: absolute;
+    right: 3.24rem;
+    bottom: 6.24rem;
+}
+.mainmid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainmid ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-4.81rem);
+}
+.mainmid li {
+    width: 26.125rem;
+    height: 21.25rem;
+    flex-shrink: 0;
+}
+.mainmidmid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.44rem;
+}
+.mainunder {
+    background-color: #7852FF;
+    box-sizing: border-box;
+    height: 35rem;
+    flex-shrink: 0;
+    color: #FFF;
+    width: 100vw;
+    font-weight: 500;
+    font-family: Poppins;
+    font-size: 3.4375rem;
+    padding: 10.19rem 9rem;
+    margin-top: 10rem;
+    position: relative;
+}
+.mainunder img {
+    width: 42.5625rem;
+    height: 47.6875rem;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    right: 10rem;
+}
+.mainunder div {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.mainunder a {
+    display: block;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 2.35094rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 5.75rem;
+}
+.mainunder a:hover {
+    text-decoration: underline;
+}
+footer {
+    width: 100vw;
+    height: 22.5625rem;
+    flex-shrink: 0;
+    background-color: #7852FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+footer p {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Archivo Black';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+footer li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Arial;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 2rem;
+}
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9rem ;
+    width: 100%;
+}
+footer li img {
+    width: 5rem;
+    height: 5rem;
+    flex-shrink: 0;
+}
+

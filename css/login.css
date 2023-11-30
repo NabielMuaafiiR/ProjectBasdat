@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  flex: 0 0 300px;
+  background-color: #7852ff;
+}
+.sidebar img {
+  width: 20rem;
+  height: 20rem;  
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-text {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 36px;
+  color: #000; /* Change the color to your preference */
+}
+
+.label {
+  font-size: 18px;
+  color: #000; /* Change the color to your preference */
+  margin-top: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.masuk-button {
+  background-color: #7852ff;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.masuk-button:hover {
+  background-color: #6243d1;
+}
+
+.signup-text {
+  color: #000; /* Change the color to your preference */
+  margin-top: 20px;
+}
+
+.signup-link {
+  color: #7852ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+.additional-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.v22_38,
+.v28_416 {
+  color: #000; /* Change the color to your preference */
+}
