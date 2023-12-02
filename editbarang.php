@@ -13,6 +13,7 @@ session_start();
 <body>
 	<form method="POST" action="proseseditbarang.php" enctype="multipart/form-data">
 		<?php
+		//mengedit barang
 		$id = $_GET['data'];
 		$query = pg_query($db, "SELECT * FROM barang where kode_produk = '$id'");
 		$row = pg_fetch_array($query);

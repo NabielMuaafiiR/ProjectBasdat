@@ -59,7 +59,7 @@ include("navbar.php");
 			//KETIKA TIDAK SEARCH APA APA
 			if(empty($search)){
 				$query = pg_query($db, "SELECT * FROM barang");
-				
+				echo'<p class="maintop">Catalog</p>';
 				while($row = pg_fetch_array($query)){
 					echo'<main>    
 						<ul>
@@ -78,10 +78,11 @@ include("navbar.php");
 			}
 			//KETIKA TIDAK ADA DI DATABASE
 			else if(pg_num_rows($query)==0){
-				echo "Pencarian Tidak Ada";
+				echo'<p class="maintop">Pencarian Tidak Ada</p>';
 
 			//MUNCULKAN SEARCH
 			}else{
+				echo'<p class="maintop"> Search For '.$search.' </p>';
 				while($row = pg_fetch_array($query)){
 					echo'<main>    
 						<ul>
@@ -102,7 +103,7 @@ include("navbar.php");
 
 		//KETIKA BARU BUKA STORE
 		else{
-			echo'<p class="maintop">Table Flowers</p>';
+			echo'<p class="maintop">Catalog</p>';
 			$query = pg_query($db, "SELECT * FROM barang");
 			while($row = pg_fetch_array($query)){
 			echo'<main>    

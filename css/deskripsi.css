@@ -85,11 +85,7 @@ header {
     font-weight: 400;
     line-height: normal;
 }
-.headlist li a:hover {
-    color: #7852FF;
-    background-color: white;
-    transition: 0.5s;
-}
+
 
 .logo {
     width: 9.75rem;

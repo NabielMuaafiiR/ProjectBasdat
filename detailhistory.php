@@ -39,6 +39,7 @@ session_start();?>
         </thead>
         <tbody>
         <?php
+        //munculkan history
             $id = $_GET['data'];
             $query = pg_query($db, "SELECT * FROM history WHERE order_id = '$id'");
             $total = 0;
