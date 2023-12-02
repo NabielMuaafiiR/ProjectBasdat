@@ -28,7 +28,7 @@
         <tbody>
             <?php
             $username = $_SESSION['username'];
-            $query = pg_query($db, "SELECT DISTINCT order_id, tanggal_pembelian FROM checkout WHERE username = '$username' ORDER BY tanggal_pembelian");
+            $query = pg_query($db, "SELECT DISTINCT order_id, tanggal_pembelian FROM history WHERE username = '$username' ORDER BY tanggal_pembelian");
             $total = 0;
 
             while ($produk = pg_fetch_array($query)) {

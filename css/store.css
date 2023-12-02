@@ -1,100 +1,20 @@
-* {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    list-style: none;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
-
-body {
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-html {
-    font-size: 16px;
-}
-
-header {
-    width: 100vw;
-    height: 11.4375rem;
-    background: #8E8FFB;
-}
-
-.headtop {
-    height: 2.75rem;
-    flex-shrink: 0;
-    background: #7852FF;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.25rem;
-    padding-right: 0.56rem;
-    width: 100%;
-}
-
-.headtop a {
+.maintop {
     color: #000;
-    text-align: center;
-    font-family: Arial;
-    font-size: 1.50944rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    transform: translateX(-2rem);
-}
-
-.headtop a:last-of-type {
-    width: 1.5625rem;
-    height: 1.5625rem;
-    flex-shrink: 0;
-}
-
-.headtop img,
-.logo img,
-.mainmid li img,
-.mainmidmid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.headunder {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0.94rem;
-    padding-right: 5.19rem;
-    transform: translateY(-0.5rem);
-    align-items: center;
-}
-
-.headlist {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 5.25rem;
-    margin-left: 10rem;
-}
-
-.headlist li a {
-    color: #000;
-    text-align: center;
-    font-family: Arial;
-    font-size: 2rem;
+    font-family: 'Archivo Black';
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-.headlist li a:hover {
-    color: #FFF;
-}
-
-.logo {
-    width: 9.75rem;
-    height: 9.75rem;
-    flex-shrink: 0;
+form {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .search {
@@ -114,96 +34,71 @@ header {
     width: 1.375rem;
     height: 1.375rem;
     flex-shrink: 0;
-    
 }
+
 .search input {
     outline: none;
     border: none;
     background: #C1D9FF;
 }
 
-
 main {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-}
-.maintop {
-    width: 24.75rem;
-    height: 3.625rem;
-    flex-shrink: 0;
-    color: #000;
-    text-align: center;
-    font-family: 'Archivo Black';
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-main ul {
-    display: flex;
-    gap: 15rem;
+    display: inline-flex;
     justify-content: center;
-}
-main ul li {
-    display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
-    flex-shrink: 0;
-    color: #000;
-    text-align: center;
-    font-family: Arial;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 20.4375rem;
-    height: 20.4375rem;
 }
-main ul li img {
-    width: 20.4375rem;
-    height: 20.4375rem;
-}
-section {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-    margin-top: 15rem;
-}
-.teksmid {
-    height: 3.625rem;
-    flex-shrink: 0;
-    color: #000;
-    text-align: center;
-    font-family: 'Archivo Black';
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-section ul {
-    display: flex;
-    gap: 15rem;
-    justify-content: center;
-}
-section ul li {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
-    flex-shrink: 0;
-    color: #000;
-    text-align: center;
-    font-family: Arial;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 20.4375rem;
-    height: 20.4375rem;
-    flex-shrink: 0;
 
+main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 320px; /* Set a fixed width for the ul elements */
+    height: 317px;
+}
+
+main li {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 300px;
+    height: 297px;
+}
+
+main .listname {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+main .listharga {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+main img {
+    width: 100%;
+    height: 193px;
+    border-radius: 5px;
+}
+
+main .maintop {
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+main a {
+    text-decoration: none;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
 }

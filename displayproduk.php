@@ -1,5 +1,6 @@
 <?php
 include("connectdb.php");
+include("navbar.php");
 session_start();
 ?>
 
@@ -27,6 +28,7 @@ session_start();
     		<div><img src="./image/<?php echo $row['gambar']; ?>" alt="Product Image" style="width: 100%; max-width: 700px;"></div>
 		</section>
         <hr>
+        <!-- menampilkan produk -->
         <section class="namabarang">
             <p>Nama Produk : <?php echo $row['nama_produk']; ?> <br></p>
             <p>Harga       : Rp.<?php echo $row['harga']; ?> <br></p>
